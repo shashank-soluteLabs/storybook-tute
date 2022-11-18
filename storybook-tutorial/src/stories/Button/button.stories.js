@@ -41,7 +41,7 @@ Danger.args = {
 
 export const Success = Template.bind({});
 
-Danger.args = {
+Success.args = {
   className: "",
   label: "Success",
   backgroundColor: "success",
