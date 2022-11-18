@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import "../../index.css";
 function Button({ className, label, backgroundColor, rounded, ...props }) {
 
   return (
@@ -14,7 +13,7 @@ function Button({ className, label, backgroundColor, rounded, ...props }) {
           ? " bg-sky-300 text-black "
           : backgroundColor === "danger"
           ? " bg-red-500 text-white "
-          : " bg-yellow-300 text-white ")
+          : " bg-yellow-300 text-black ")
       }
       {...props}
     >
