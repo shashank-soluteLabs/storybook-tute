@@ -38,3 +38,12 @@ Danger.args = {
   backgroundColor: "danger",
   rounded: true,
 };
+
+export const Success = Template.bind({});
+
+Danger.args = {
+  className: "",
+  label: "Success",
+  backgroundColor: "success",
+  rounded: true,
+};
