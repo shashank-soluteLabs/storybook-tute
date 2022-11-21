@@ -6,13 +6,24 @@ export interface ButtonProps
   className?: string;
   /** it is text which sets the button context */
   label?: string;
+  /**  Button Size */
+  size: "small" | "medium" | "large";
   /** its sets the background color */
   backgroundColor?: string;
   /**  Button corner radius */
   rounded?: boolean;
 }
 
-const Button: React.FC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ className, label, backgroundColor, rounded, ...props }: ButtonProps) => {
+const Button: React.FC<
+  ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
+> = ({
+  className,
+  label,
+  size,
+  backgroundColor,
+  rounded,
+  ...props
+}: ButtonProps) => {
   return (
     <button
       className={
@@ -27,7 +38,14 @@ const Button: React.FC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElemen
           ? " bg-red-500 text-white "
           : backgroundColor === "success"
           ? " bg-green-500 text white "
-          : " bg-yellow-300 text-black ")
+          : " bg-yellow-300 text-black ") +
+        (size === "small"
+          ? "w-16 h-10 text-sm "
+          : size === "medium"
+          ? "w-24 h-14 text-xm "
+          : size === "large"
+          ? "w-24 h-16 text-lg "
+          : "")
       }
       {...props}
     >

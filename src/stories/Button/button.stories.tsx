@@ -9,6 +9,7 @@ export default {
     onClick: {
       action: "clicked",
     },
+    backgroundColor: { control: 'color' },
   },
 } as Meta;
 
@@ -19,6 +20,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   className: " ",
   label: "Primary",
+  size:"small",
   backgroundColor: "primary",
   rounded: true,
 };
