@@ -45,5 +45,5 @@ Success.args = {
   className: "",
   label: "Success",
   backgroundColor: "success",
-  rounded: true,
+  rounded: false,
 };
