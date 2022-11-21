@@ -1,4 +1,6 @@
-import Button from "../../Components/Button/Button";
+import React from "react";
+import { Story, Meta } from "@storybook/react";
+import Button, { ButtonProps } from "../../Components/Button/Button";
 
 export default {
   title: "Components/Button",
@@ -8,14 +10,14 @@ export default {
       action: "clicked",
     },
   },
-};
+} as Meta;
 
-const Template = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 
 Primary.args = {
-  className: "",
+  className: " ",
   label: "Primary",
   backgroundColor: "primary",
   rounded: true,
@@ -41,7 +43,7 @@ Danger.args = {
 
 export const Success = Template.bind({});
 
-Success.args = { 
+Success.args = {
   className: "",
   label: "Success",
   backgroundColor: "success",

@@ -1,5 +1,18 @@
-import PropTypes from "prop-types";
-function Button({ className, label, backgroundColor, rounded, ...props }) {
+import * as React from "react";
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /**  Additonal Classes and overrides */
+  className?: string;
+  /** it is text which sets the button context */
+  label?: string;
+  /** its sets the background color */
+  backgroundColor?: string;
+  /**  Button corner radius */
+  rounded?: boolean;
+}
+
+const Button: React.FC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ className, label, backgroundColor, rounded, ...props }: ButtonProps) => {
   return (
     <button
       className={
@@ -21,11 +34,6 @@ function Button({ className, label, backgroundColor, rounded, ...props }) {
       {label}
     </button>
   );
-}
-Button.propTypes = {
-  className: PropTypes.string,
-  label: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  rounded: PropTypes.bool,
 };
+
 export default Button;
